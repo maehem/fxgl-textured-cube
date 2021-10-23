@@ -28,6 +28,10 @@ import javafx.scene.shape.TriangleMesh;
  */
 public class App extends GameApplication {
 
+    private static final String DIRT_BLOCK_PNG = "/assets/textures/dirt_01.png";
+    private static final String TEMPLATE_BLOCK_PNG = "/assets/textures/cube-template.png";
+    private static final String DEFAULT_BLOCK_PNG = DIRT_BLOCK_PNG;
+    
     private Camera3D camera;
     private boolean titleSet = false;
     private TriangleMesh mesh;
@@ -137,7 +141,7 @@ public class App extends GameApplication {
             5,8,   3,4,   7,3            
         );
         
-        Image im = new Image(getClass().getResourceAsStream("/assets/textures/cube-template.png"));
+        Image im = new Image(getClass().getResourceAsStream(DEFAULT_BLOCK_PNG));
         Material mat = new PhongMaterial(Color.GRAY, im, null, null, im);
         MeshView meshView = new MeshView(mesh);
         meshView.setMaterial(mat);
