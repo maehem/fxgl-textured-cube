@@ -30,7 +30,7 @@ public class App extends GameApplication {
 
     private static final String DIRT_BLOCK_PNG = "/assets/textures/dirt_01.png";
     private static final String TEMPLATE_BLOCK_PNG = "/assets/textures/cube-template.png";
-    private static final String DEFAULT_BLOCK_PNG = DIRT_BLOCK_PNG;
+    private static final String DEFAULT_BLOCK_PNG = TEMPLATE_BLOCK_PNG;
     
     private Camera3D camera;
     private boolean titleSet = false;
@@ -39,8 +39,8 @@ public class App extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings gs) {
-        gs.setWidth(800);
-        gs.setHeight(600);
+        gs.setWidth(1152);
+        gs.setHeight(864);
         gs.set3D(true);
     }
 
